@@ -12,8 +12,8 @@ import type { Country } from '../types';
  * material, confirm wording at the linked source before relying on it.
  *
  * Deliberately omitted because NZ availability could not be verified at review:
- * Omnipod 5, Tandem Mobi, Medtronic Simplera Sync. Add them once a New Zealand
- * supply or Medsafe listing is confirmed.
+ * Omnipod 5 and Medtronic Simplera Sync. Add them once a New Zealand supply or
+ * Medsafe listing is confirmed.
  */
 export const nz: Country = {
 	code: 'NZ',
@@ -28,10 +28,11 @@ export const nz: Country = {
 		// Pumps
 		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Funded by Pharmac, supplied by NZMS. Pairs with the Dexcom G7.', subsidy: ['pump', 'consumables'] },
 		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Funded by Pharmac, supplied by Pharmaco. Runs mylife CamAPS FX with the Dexcom G6 or FreeStyle Libre 3 Plus.', subsidy: ['pump', 'consumables'] },
-		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Self-funded. Pods are not on the Pharmac schedule.' },
-		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Self-funded, supplied by InterMed. The earlier MiniMed 770G left Pharmac funding for new users on 1 January 2025.' },
+		{ ref: 'tandem-mobi', availability: 'unavailable', availabilityNote: 'Not yet available in New Zealand. Tandem’s Mobi rollout began in the United States in 2026, with New Zealand supply through NZMS anticipated but not yet confirmed.' },
+		{ ref: 'omnipod-dash', availability: 'limited', availabilityNote: 'Not stocked in New Zealand and not on the Pharmac schedule. A small number of users self-fund pods sourced from Australia.' },
+		{ ref: 'minimed-780g', availability: 'limited', availabilityNote: 'Self-funded, supplied by InterMed, as Medtronic is wound down in favour of the funded pumps. The funded MiniMed 770G left Pharmac funding for new users on 1 January 2025, and its consumables stay funded only until 1 October 2026, by which point existing users transition to the Tandem t:slim X2 or YpsoPump.' },
 		{ ref: 'medtrum-nano', availability: 'available', availabilityNote: 'Self-funded through Intuitive Therapeutics, or funded through Pharmac’s Alternative Brand Allowance for people the two main funded pumps do not suit.', subsidy: ['aba'] },
-		{ ref: 'dana-i', availability: 'limited', availabilityNote: 'Self-funded through Intuitive Therapeutics, being wound down in favour of the Medtrum Nano.' },
+		{ ref: 'dana-i', availability: 'limited', availabilityNote: 'Very limited to non-existent in New Zealand. Self-funded through Intuitive Therapeutics, being wound down in favour of the Medtrum Nano.' },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only.' },
 
 		// Sensors
