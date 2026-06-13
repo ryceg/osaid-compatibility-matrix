@@ -55,15 +55,6 @@ export const au: Country = {
 				asOf: '2024'
 			},
 			{
-				name: 'ADS / ADEA',
-				full: 'Diabetes clinical societies (with ADIPS and APEG)',
-				stance: 'cautious',
-				statement:
-					'A joint consensus statement on diabetes technologies acknowledges people using do-it-yourself systems, flags the regulatory issues involved, and supports shared decision-making with the care team.',
-				source: 'https://www.diabetessociety.com.au/utilisation-access-and-recommendations-regarding-technologies-for-people-living-with-type-1-diabetes-consensus-statement-of-the-ads-adea-adips-apeg-working-group/',
-				asOf: '2021'
-			},
-			{
 				name: 'Diabetes Australia',
 				full: 'Peak consumer body',
 				stance: 'neutral',
