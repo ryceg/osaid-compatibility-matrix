@@ -1,0 +1,42 @@
+{
+	"name": "osaid-compatibility-matrix",
+	"version": "0.1.0",
+	"description": "A vendor-neutral, community-maintained knowledge base of open-source automated insulin delivery (OSAID) compatibility: pumps, sensors, algorithms and per-country availability, funding and community.",
+	"type": "module",
+	"license": "MIT",
+	"author": "ryceg",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ryceg/osaid-compatibility-matrix.git"
+	},
+	"main": "./index.ts",
+	"types": "./index.ts",
+	"sideEffects": false,
+	"files": [
+		"catalog",
+		"countries",
+		"pump-images",
+		"*.ts"
+	],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"keywords": [
+		"diabetes",
+		"insulin-pump",
+		"cgm",
+		"loop",
+		"androidaps",
+		"trio",
+		"nightscout",
+		"compatibility"
+	],
+	"devDependencies": {
+		"typescript": "^5.7.0",
+		"vitest": "^3.0.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": ["esbuild"]
+	}
+}
