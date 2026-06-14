@@ -19,8 +19,7 @@
 		"*.ts"
 	],
 	"scripts": {
-		"typecheck": "tsc --noEmit",
-		"test": "vitest run"
+		"typecheck": "tsc --noEmit"
 	},
 	"keywords": [
 		"diabetes",
@@ -33,10 +32,6 @@
 		"compatibility"
 	],
 	"devDependencies": {
-		"typescript": "^5.7.0",
-		"vitest": "^3.0.0"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": ["esbuild"]
+		"typescript": "^5.7.0"
 	}
 }

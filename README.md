@@ -66,11 +66,12 @@ The data is the project. PRs that add a device, fix a compatibility status, or a
 
 ```bash
 pnpm install
-pnpm typecheck   # tsc — most reference errors fail here
-pnpm test        # integrity: unique ids, known refs, every country resolves
+pnpm typecheck   # tsc — typo'd algorithm keys and device refs fail to compile
 ```
 
-CI runs both on every PR.
+CI runs the typecheck on every PR. There is no separate test suite: the derived
+id types catch bad references at compile time, and a consumer's build fails on a
+ref that doesn't resolve.
 
 ## License
 

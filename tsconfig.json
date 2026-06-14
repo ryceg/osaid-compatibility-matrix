@@ -15,5 +15,5 @@
 		"verbatimModuleSyntax": true,
 		"noEmit": true
 	},
-	"include": ["*.ts", "catalog/**/*.ts", "countries/**/*.ts", "test/**/*.ts"]
+	"include": ["*.ts", "catalog/**/*.ts", "countries/**/*.ts"]
 }
