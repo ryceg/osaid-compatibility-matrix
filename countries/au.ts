@@ -21,12 +21,12 @@ export const au: Country = {
 	listings: [
 		// Pumps
 		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Pods are an NDSS consumable. The device cost is either an out-of-pocket subscription with Insulet or covered by private hospital cover.', subsidy: ['omnipod'] },
-		{ ref: 'dana-i', availability: 'available', availabilityNote: 'On the Australian Prescribed List.', subsidy: ['pump-insurance', 'consumables'] },
-		{ ref: 'omnipod-5:g7', availability: 'available', availabilityNote: 'Pods are an NDSS consumable (code 693). The device cost is either an out-of-pocket subscription with Insulet or covered by private hospital cover.', subsidy: ['omnipod'] },
-		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Sold by AMSL Diabetes, consumables on the NDSS.', subsidy: ['pump-insurance', 'consumables'] },
-		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic Australia with the Guardian 4 sensor.', subsidy: ['pump-insurance', 'consumables'] },
-		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX. Also offered under the Insulin Pump Program.', subsidy: ['pump-insurance', 'consumables', 'ipp'] },
-		{ ref: 'dana-rs', availability: 'limited', availabilityNote: 'Superseded by the DANA-i. ARTG entry cancelled.' },
+		{ ref: 'omnipod-5', availability: 'available', availabilityNote: 'Pods are an NDSS consumable (code 693), supplied in Dexcom G6, Dexcom G7 and Libre 2 Plus versions — you choose which at the pharmacy. The device cost is either an out-of-pocket subscription with Insulet or covered by private hospital cover.', subsidy: ['omnipod'] },
+		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Sold by AMSL Diabetes, consumables on the NDSS.', subsidy: ['pump-insurance', 'consumables', 'manufacturer-programs'] },
+		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic Australia with the Guardian 4 sensor.', subsidy: ['pump-insurance', 'consumables', 'manufacturer-programs'] },
+		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX. Also offered under the Insulin Pump Program.', subsidy: ['pump-insurance', 'consumables', 'ipp', 'manufacturer-programs'] },
+		{ ref: 'dana-i', availability: 'unavailable', availabilityNote: 'The Australian distributor has closed and no DANA consumables remain on the NDSS, so it can no longer be obtained or supported here. A unit imported from overseas is not a supported product.' },
+		{ ref: 'dana-rs', availability: 'unavailable', availabilityNote: 'In-warranty DANA RS units were upgraded to the DANA-i. With the Australian DANA distributor now closed, it sits in the same position — no longer obtainable or supported here.' },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only.' },
 		{ ref: 'accu-chek-combo', availability: 'unavailable', availabilityNote: 'Discontinued in 2021. Its consumables leave the NDSS at the end of June 2026.' },
 		{ ref: 'omnipod-eros', availability: 'unavailable', availabilityNote: 'Legacy pods, no longer supplied in Australia.' },
@@ -92,7 +92,7 @@ export const au: Country = {
 			via: 'Private health insurance',
 			eligibility: 'Eligible hospital cover that includes insulin pumps',
 			covers: 'The cost of the pump device, which is listed on the Australian Prescribed List of Medical Devices.',
-			note: 'Waiting periods apply and the included tier varies by insurer.',
+			note: 'Waiting periods apply to a new policy for a pre-existing condition such as type 1 diabetes, and the included tier varies by insurer.',
 			link: 'https://www.health.gov.au/topics/private-health-insurance/what-private-health-insurance-covers/prostheses-cover-under-private-health-insurance'
 		},
 		{
@@ -121,6 +121,15 @@ export const au: Country = {
 			eligibility: 'Under 21, on a current Medicare card, family income under the program threshold, and not eligible for pump funding through private health insurance',
 			covers: 'An insulin pump for families without private cover.',
 			link: 'https://breakthrought1d.org.au/t1d-treatment-technology/insulin-pump-program/'
+		},
+		{
+			id: 'manufacturer-programs',
+			name: 'Manufacturer pump programs',
+			via: 'Pump manufacturers',
+			eligibility: 'Varies by manufacturer, and the programs have changed over time',
+			covers:
+				'Australia-specific gap, loan and upgrade programs run by individual manufacturers to reduce or spread the device cost — for example the Ypsomed gap program, Tandem (t:slim X2) and the Medtronic AccessPlus Program. Terms differ by vendor.',
+			note: 'Contact the manufacturer directly for the current details of any such program.'
 		}
 	],
 

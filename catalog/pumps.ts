@@ -31,8 +31,8 @@ export const pumps = [
 		image: 'omnipod-dash',
 		imageCredit: 'Image © Insulet (omnipod.com)',
 		blurb:
-			'A tubeless patch pump that holds up to 200 units of U-100 insulin per pod, delivers for up to 72 hours, and connects to a phone over Bluetooth Low Energy.',
-		specs: { Connectivity: 'Bluetooth LE', Reservoir: '200 U', Format: 'Tubeless patch', Wear: '72 hours' },
+			'A tubeless patch pump that holds up to 200 units of U-100 insulin per pod and delivers for up to 72 hours, plus an 8-hour grace period. It is controlled over Bluetooth Low Energy by its Personal Diabetes Manager (PDM); an open-source app stands in for the PDM.',
+		specs: { Connectivity: 'Bluetooth LE', Controller: 'PDM (replaced by the loop app)', Reservoir: '200 U', Format: 'Tubeless patch', Wear: '72 h + 8 h grace' },
 		compat: {
 			loop: { status: 'yes', note: 'Native driver over Bluetooth, no bridge needed.', link: LOOP_OMNIPOD },
 			trio: { status: 'yes', note: 'Native driver over Bluetooth, no bridge needed.', link: `${TRIO_PUMP}#omnipod-dash` },
@@ -53,14 +53,14 @@ export const pumps = [
 		image: 'omnipod-eros',
 		imageCredit: 'Image: Guus Herbschleb, CC BY 3.0, via Wikimedia Commons',
 		blurb:
-			'A tubeless patch pump that holds up to 200 units of U-100 insulin per pod, delivers for up to 72 hours, and communicates over a 433 MHz radio link that needs a RileyLink bridge to reach a phone.',
-		specs: { Connectivity: '433 MHz radio (RileyLink)', Reservoir: '200 U', Format: 'Tubeless patch', Wear: '72 hours' },
+			'A tubeless patch pump that holds up to 200 units of U-100 insulin per pod and delivers for up to 72 hours, plus an 8-hour grace period. It communicates over a 433 MHz radio link that needs a compatible radio bridge — an OrangeLink Pro or EmaLink, as RileyLinks are no longer sold.',
+		specs: { Connectivity: '433 MHz radio (bridge required)', Reservoir: '200 U', Format: 'Tubeless patch', Wear: '72 h + 8 h grace' },
 		compat: {
-			loop: { status: 'partial', note: 'Requires a RileyLink radio bridge.', link: LOOP_OMNIPOD },
-			trio: { status: 'partial', note: 'Requires a RileyLink radio bridge.', link: `${TRIO_PUMP}#omnipod-eros` },
+			loop: { status: 'partial', note: 'Requires a radio bridge (OrangeLink Pro or EmaLink).', link: LOOP_OMNIPOD },
+			trio: { status: 'partial', note: 'Requires a radio bridge (OrangeLink Pro or EmaLink).', link: `${TRIO_PUMP}#omnipod-eros` },
 			aaps: {
 				status: 'partial',
-				note: 'OmnipodEros driver, requires a RileyLink bridge.',
+				note: 'OmnipodEros driver, requires a radio bridge (OrangeLink Pro or EmaLink).',
 				link: 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/OmnipodEros.html'
 			}
 		}
@@ -75,7 +75,7 @@ export const pumps = [
 		imageCredit: 'Image © Insulet (omnipod.com)',
 		blurb:
 			'A tubeless patch pump that holds 85 to 200 units of U-100 insulin per pod and runs an on-pod automated insulin delivery algorithm using readings from an integrated CGM.',
-		specs: { Connectivity: 'Bluetooth LE', Reservoir: '85 to 200 U', Format: 'Tubeless patch', Wear: '72 hours' },
+		specs: { Connectivity: 'Bluetooth LE', Reservoir: '85 to 200 U', Format: 'Tubeless patch', Wear: '72 h + 8 h grace' },
 		commercialAid: 'SmartAdjust',
 		compat: {
 			loop: { status: 'planned', note: 'Support is in closed beta, with an open beta anticipated for summer 2026.', link: OMNIPOD_FIVE_OSS },
@@ -202,33 +202,33 @@ export const pumps = [
 		image: 'medtronic-paradigm',
 		imageCredit: 'Image: Wikimedia Commons, CC BY-SA 3.0',
 		blurb:
-			'A tubed pump with a 180 or 300 unit reservoir that communicates over a proprietary sub-GHz radio.',
-		specs: { Connectivity: '916/868 MHz radio (RileyLink)', Reservoir: '180 U or 300 U', Format: 'Tubed' },
+			'A tubed pump that communicates over a proprietary sub-GHz radio. The 180 unit reservoir is discontinued, leaving only the 300 unit models in supply.',
+		specs: { Connectivity: '916/868 MHz radio (bridge required)', Reservoir: '300 U (180 U discontinued)', Format: 'Tubed' },
 		variants: [
 			{
 				id: 'fw-old',
-				name: 'firmware 2.7A and earlier',
+				name: 'loopable models',
 				compat: {
-					loop: { status: 'partial', note: 'Older models and firmware only, requires a RileyLink radio bridge.', link: LOOP_PUMP },
-					trio: { status: 'partial', note: 'Older models and firmware only, requires a RileyLink radio bridge.', link: `${TRIO_PUMP}#medtronic-pumps` },
+					loop: { status: 'partial', note: 'Older pre-lockout models only; which model and firmware loops varies by region, so check the linked guide. Needs a radio bridge (OrangeLink Pro or EmaLink).', link: LOOP_PUMP },
+					trio: { status: 'partial', note: 'Older pre-lockout models only; which model and firmware loops varies by region, so check the linked guide. Needs a radio bridge (OrangeLink Pro or EmaLink).', link: `${TRIO_PUMP}#medtronic-pumps` },
 					aaps: {
 						status: 'partial',
-						note: 'Older models and firmware only, requires a RileyLink radio bridge.',
+						note: 'Older pre-lockout models only; which model and firmware loops varies by region, so check the linked guide. Needs a radio bridge (OrangeLink Pro or EmaLink).',
 						link: 'https://androidaps.readthedocs.io/en/latest/Configuration/MedtronicPump.html'
 					}
 				}
 			},
 			{
 				id: 'fw-new',
-				name: 'firmware 2.7B and later',
+				name: 'locked-down models',
 				blurb:
-					'A tubed pump whose firmware blocks external remote-control commands, leaving it controllable only from its own buttons and handheld remote.',
+					'A tubed pump whose newer firmware blocks external remote-control commands, leaving it controllable only from its own buttons and handheld remote.',
 				compat: {
-					loop: { status: 'no', note: 'Firmware 2.7B and later blocks remote control.', link: LOOP_PUMP },
-					trio: { status: 'no', note: 'Firmware 2.7B and later blocks remote control.', link: TRIO_PUMP },
+					loop: { status: 'no', note: 'Newer lockout firmware blocks remote control.', link: LOOP_PUMP },
+					trio: { status: 'no', note: 'Newer lockout firmware blocks remote control.', link: TRIO_PUMP },
 					aaps: {
 						status: 'no',
-						note: 'Firmware 2.7B and later blocks remote control.',
+						note: 'Newer lockout firmware blocks remote control.',
 						link: 'https://androidaps.readthedocs.io/en/latest/Configuration/MedtronicPump.html'
 					}
 				}
