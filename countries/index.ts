@@ -8,13 +8,15 @@ import { ch } from './ch';
 import { us } from './us';
 import { gb } from './gb';
 import { es } from './es';
+import { pk } from './pk';
+import { id } from './id';
 
 /**
  * Country registry. Live countries have a full overlay; "soon" countries are
  * placeholders for the switcher until their data lands. Add a country by
  * dropping a Country here, and the route and switcher pick it up automatically.
  */
-const live: Country[] = [au, nz, ca, fr, de, ch, us, gb, es];
+const live: Country[] = [au, nz, ca, fr, de, ch, us, gb, es, pk, id];
 
 const soon: CountryRef[] = [
 	{ code: 'MX', name: 'Mexico', status: 'soon' },

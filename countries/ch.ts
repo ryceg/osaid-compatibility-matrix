@@ -17,7 +17,7 @@ import type { Country } from '../types';
  * Switzerland-specific notes encoded here: the YpsoPump is made by Ypsomed in
  * Burgdorf, and its mylife CamAPS FX system ("mylife Loop") reached Switzerland
  * in May 2025 pairing with the FreeStyle Libre 3 Plus and the Dexcom G6, with
- * the Dexcom G7 due by summer 2026. The FreeStyle Libre sensors sold here are
+ * the Dexcom G7 due by mid-2026. The FreeStyle Libre sensors sold here are
  * the European direct-pairing build (the `:eu` variants). Roche Diabetes Care
  * is based in Basel, so the Accu-Chek Insight is a local product.
  *
@@ -39,7 +39,7 @@ export const ch: Country = {
 
 	listings: [
 		// Pumps
-		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Made by Ypsomed in Burgdorf. Runs mylife CamAPS FX ("mylife Loop"), which reached Switzerland in May 2025 pairing with the FreeStyle Libre 3 Plus and the Dexcom G6; the Dexcom G7 is due by summer 2026.', subsidy: ['migel-pump'] },
+		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Made by Ypsomed in Burgdorf. Runs mylife CamAPS FX ("mylife Loop"), which reached Switzerland in May 2025 pairing with the FreeStyle Libre 3 Plus and the Dexcom G6; the Dexcom G7 is due by mid-2026.', subsidy: ['migel-pump'] },
 		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Runs Control-IQ with the Dexcom G6 or G7.', subsidy: ['migel-pump'] },
 		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic with the Guardian 4 sensor, running the SmartGuard algorithm.', subsidy: ['migel-pump'] },
 		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump controlled by its handset, supplied through Swiss diabetes channels.', subsidy: ['migel-pump'] },

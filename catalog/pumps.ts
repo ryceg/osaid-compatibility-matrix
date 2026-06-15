@@ -78,8 +78,8 @@ export const pumps = [
 		specs: { Connectivity: 'Bluetooth LE', Reservoir: '85 to 200 U', Format: 'Tubeless patch', Wear: '72 h + 8 h grace' },
 		commercialAid: 'SmartAdjust',
 		compat: {
-			loop: { status: 'planned', note: 'Support is in closed beta, with an open beta anticipated for summer 2026.', link: OMNIPOD_FIVE_OSS },
-			trio: { status: 'planned', note: 'Support is in closed beta, with an open beta anticipated for summer 2026.', link: OMNIPOD_FIVE_OSS },
+			loop: { status: 'planned', note: 'Support is in closed beta, with an open beta anticipated for late 2026.', link: OMNIPOD_FIVE_OSS },
+			trio: { status: 'planned', note: 'Support is in closed beta, with an open beta anticipated for late 2026.', link: OMNIPOD_FIVE_OSS },
 			aaps: { status: 'planned', note: 'In development, not yet released.', link: AAPS_FUTURE }
 		},
 		variants: [
@@ -167,7 +167,7 @@ export const pumps = [
 			trio: { status: 'no', note: 'No Trio driver.' },
 			aaps: {
 				status: 'yes',
-				note: 'combov2 driver from AndroidAPS 3.2. No extended or multiwave bolus.',
+				note: 'combov2 driver from AndroidAPS 3.2.',
 				link: 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/Accu-Chek-Combo-Pump-v2.html'
 			}
 		},
@@ -320,9 +320,9 @@ export const pumps = [
 		commercialAid: 'SmartGuard',
 		pairsWith: ['guardian-4', 'simplera-sync'],
 		compat: {
-			loop: { status: 'no', note: 'Closed system. Only older Medtronic models with legacy firmware are loopable.', link: LOOP_PUMP },
-			trio: { status: 'no', note: 'Closed system. Only older Medtronic models with legacy firmware are loopable.', link: TRIO_PUMP },
-			aaps: { status: 'no', note: 'Closed system. Only older Medtronic models are AndroidAPS compatible.', link: AAPS_PUMPS }
+			loop: { status: 'no', note: 'Closed system, no DIY driver.', link: LOOP_PUMP },
+			trio: { status: 'no', note: 'Closed system, no DIY driver.', link: TRIO_PUMP },
+			aaps: { status: 'no', note: 'Closed system, no DIY driver.', link: AAPS_PUMPS }
 		},
 		sources: [
 			{
