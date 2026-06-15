@@ -131,12 +131,6 @@ export const us: Country = {
 
 	groups: [
 		{
-			name: 'Loop and Learn',
-			platform: 'Website / Facebook / Discord',
-			blurb: 'US volunteer-run group that helps people build and use the Loop do-it-yourself system, with build help, live sessions, a Facebook group and a Discord server.',
-			link: 'https://www.loopandlearn.org/'
-		},
-		{
 			name: 'Loop Docs and Zulip',
 			platform: 'Documentation / Zulip chat',
 			blurb: 'The official Loop documentation, plus the Loop Zulip chat where users discuss issues directly with the developers.',

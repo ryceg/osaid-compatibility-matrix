@@ -14,6 +14,12 @@ export const globalGroups: CommunityGroup[] = [
 		link: 'https://www.facebook.com/groups/TheLoopedGroup'
 	},
 	{
+		name: 'Loop and Learn',
+		platform: 'Website / Facebook / Discord',
+		blurb: 'Volunteer-run group that helps people build and use the Loop and Trio do-it-yourself systems, with build help, live sessions, a Facebook group and a Discord server.',
+		link: 'https://www.loopandlearn.org/'
+	},
+	{
 		name: 'AndroidAPS Users',
 		platform: 'Facebook',
 		blurb: 'Global support group for AndroidAPS setup, pump pairing and troubleshooting.',
